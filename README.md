@@ -1,22 +1,15 @@
----
-title: GradioRAG
-emoji: 📊
-colorFrom: red
-colorTo: pink
-sdk: gradio
-sdk_version: 4.28.2
-app_file: app.py
-pinned: false
----
+# RAGify
 
-A Gradio interface for performing RAG on uploaded PDFs.
+_A Gradio App for Retrieval-Augmented-Generation on PDFs_
 
-Currently set up for models accessed with llama-cpp-python.
+**RAGify** is a tool for querying PDFs on the fly. PDFs are uploaded from the host computer, subject to OCR, vectorized using `langchain.text_splitter` functions, and stored in a temporary vector database, which is searched using `chroma`'s query function. Results are fed to the user's model of choice (currently either [tinyllama-1.1b-chat-v1.0.Q3_K_M.gguf](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF) and [llama-2-7b-chat.Q5_K_M.gguf](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF)).
 
-To use:
-1. Create models/ subdirectory
-2. Download desired model and add to models/. Note: Current version of the app accepts llama-2-7b-chat.Q5_K_M.gguf and tinyllama-1.1b-chat-v1.0.Q3_K_M.gguf
-3. Load dependencies using requirements.txt
-4. Run app.py
+## Instructions
+1. Download and add desired LLMs to `models/`. _Note: Current version of the app accepts [tinyllama-1.1b-chat-v1.0.Q3_K_M.gguf](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF) or [llama-2-7b-chat.Q5_K_M.gguf](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF)._
+2. Add the prompt templates in the rag() function and in the dropdown menu (via the 'models' list).
+3. Load dependencies
+4. Run the app
 
+## Contributions
+Feel free to submit a pull request for any issues or improvements!
 Author: Megan Chiovaro (@mchiovaro)
