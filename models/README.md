@@ -1,0 +1,1 @@
+Place desired models in this directory. The current [app.py](/app.py) will accept [tinyllama-1.1b-chat-v1.0.Q3_K_M.gguf](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF) and [llama-2-7b-chat.Q5_K_M.gguf](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF). Once additional model files are added, add the model name to the list in [app.py](/app.py).
